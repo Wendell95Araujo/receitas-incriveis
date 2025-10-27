@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Receitas Incríveis</title>
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
+    <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js"></script>
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header class="custom-header">
+        <div class="logo-area">
+            <div class="avatar">
+                <wa-avatar image="assets/img/logo.svg" label="Logo Receitas Incríveis"></wa-avatar>
+            </div>
+            <span>Receitas Incríveis</span>
+        </div>
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Chefs</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <wa-icon name="bars" scale="1.5"></wa-icon>
+        </div>
+    </header>
+
+    <main>
+        <h1>Entre em Contato</h1>
+        <p>Tem alguma dúvida, sugestão ou parceria? Fale conosco!</p>
+        <div class="form-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+                </div>
+                <div class="form-group">
+                    <wa-select label="Assunto">
+                        <wa-option value="duvida">Dúvida sobre Receita</wa-option>
+                        <wa-option value="sugestao">Sugestão de Receita</wa-option>
+                        <wa-option value="parceria">Parceria</wa-option>
+                        <wa-option value="outro">Outro</wa-option>
+                    </wa-select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Enviar Mensagem</button>
+            </form>
+            <div class="contact-illustration">
+                <img src="assets/img/Contact us.gif" alt="Ilustração de Contato" >
+            </div>
+        </div>
+    </main>
+    <footer class="custom-footer">
+        <div class="footer-brand">
+            <img src="assets/img/logo.svg" alt="Logo Receitas Incríveis" class="footer-logo">
+            <span class="footer-sitename">Receitas Incríveis</span>
+        </div>
+        <p class="footer-credits">
+            Desenvolvido por 
+            <a href="https://wendell-araujo.web.app/" target="_blank" rel="noopener noreferrer">
+                Wendell Araujo Dev
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
