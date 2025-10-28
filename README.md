@@ -110,9 +110,10 @@ O projeto está organizado da seguinte forma para facilitar a manutenção:
 │   │   ├── recipe-loader.js  # Carrega a receita específica
 │   │   └── chefs-loader.js   # Carrega os chefs na página sobre
 │   └── img/
+│       ├── logo.png
 │       ├── logo.svg
 │       ├── Contact us.gif
-│       └── ... (seus screenshots)
+│       └── screenshots
 └── README.md
 ```
 
