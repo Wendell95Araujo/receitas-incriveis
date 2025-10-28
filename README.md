@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/logo.png" alt="Logo Receitas Incríveis" width="150"/>
+  <img src="https://receitas-incriveis-wma.web.app/assets/img/logo.png" alt="Logo Receitas Incríveis" width="150"/>
 </p>
 
 <h1 align="center">
@@ -31,16 +31,16 @@ Este projeto foi desenvolvido como um exercício prático para explorar a biblio
     <td align="center"><strong>Página da Receita</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/img/screenshot-home.png" alt="Screenshot da Página Inicial"></td>
-    <td><img src="assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita"></td>
+    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-home.png" alt="Screenshot da Página Inicial"></td>
+    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita"></td>
   </tr>
   <tr>
     <td align="center"><strong>Página de Chefs</strong></td>
     <td align="center"><strong>Layout Responsivo (Mobile)</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs"></td>
-    <td><img src="assets/img/screenshot-mobile.png" alt="Screenshot do site em um dispositivo móvel"></td>
+    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs"></td>
+    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-mobile.png" alt="Screenshot do site em um dispositivo móvel"></td>
   </tr>
 </table>
 
