@@ -28,21 +28,21 @@ const recipes = [
     {
         id: 'salada-verao',
         titulo: 'Salada Fresca de Verão',
-        imagem: 'https://img.freepik.com/fotos-gratis/salada-grega-classica-de-vegetais-frescos-pepino-tomate-pimentao-alface-cebola-roxa-queijo-feta-e-azeitonas-com-azeite-comida-saudavel-vista-de-cima_1150-44877.jpg?t=st=1761608888~exp=1761612488~hmac=dafde1a9c856db1d30aa9bc2ebccba0672b0000dc16cd67da97364c3c61d04ef&w=1060',
+        imagem: 'assets/img/salada-verao.jpg',
         descricao: 'Uma salada leve e refrescante, perfeita para os dias quentes.',
         chefId: 'ana-souza', 
         dificuldade: 'Fácil',
         tempo: '15 min',
         rating: 4.5,
         avaliacoes: 23,
-        ingredientes: [ '200g de mix de folhas', '1 xícara de tomates cereja', '1/2 pepino japonês', '1/4 de cebola roxa', '50g de queijo feta', 'Azeite, sal e pimenta' ],
+        ingredientes: [ '200g de mix de folhas', '1 xícara de tomates cereja', '1 xícara de azeitonas pretas picadas', '1/2 pepino japonês', '1/4 de cebola roxa', '50g de queijo feta', 'Azeite, sal e pimenta' ],
         preparo: [ 'Misture todos os ingredientes em uma saladeira grande.', 'Tempere com azeite, sal e pimenta a gosto pouco antes de servir.' ],
         dica: 'Para uma salada ainda mais crocante, deixe as folhas de molho em água gelada por 10 minutos antes de montar o prato.'
     },
     {
         id: 'panquecas-americanas',
         titulo: 'Panquecas Americanas',
-        imagem: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=780',
+        imagem: 'assets/img/panquecas-americanas.jpg',
         descricao: 'A receita perfeita para um café da manhã de fim de semana inesquecível.',
         chefId: 'julia-costa', 
         dificuldade: 'Fácil',
@@ -56,7 +56,7 @@ const recipes = [
     {
         id: 'pizza-margherita',
         titulo: 'Pizza Margherita Caseira',
-        imagem: 'https://img.freepik.com/fotos-gratis/uma-pizza-margherita-recem-cozida-com-queijo-mozzarella-e-folhas-de-manjericao_9975-124847.jpg?t=st=1761609105~exp=1761612705~hmac=ce73be88565008e1b660b300a51165c610474c20c83c7d0643d70eabe9f5c601&w=1060',
+        imagem: 'assets/img/pizza-margherita.jpg',
         descricao: 'Aprenda a fazer a clássica pizza italiana com ingredientes simples.',
         chefId: 'marcos-l', 
         dificuldade: 'Médio',
@@ -70,7 +70,7 @@ const recipes = [
     {
         id: 'mousse-maracuja',
         titulo: 'Mousse de Maracujá Rápido',
-        imagem: 'https://img.freepik.com/fotos-gratis/vida-morta-de-uma-chavena-de-sobremesa-de-acai-brasileira_23-2150168804.jpg?ga=GA1.1.224030483.1761595893&semt=ais_hybrid&w=740&q=80',
+        imagem: 'assets/img/mousse-maracuja.jpg',
         descricao: 'Uma sobremesa aerada, cremosa e com o equilíbrio perfeito entre doce e azedo.',
         chefId: 'julia-costa', 
         dificuldade: 'Muito Fácil',
@@ -84,7 +84,7 @@ const recipes = [
     {
         id: 'lasanha-bolonhesa',
         titulo: 'Lasanha à Bolonhesa',
-        imagem: 'https://images.unsplash.com/photo-1574894709920-11b28e7367e3?q=80&w=870',
+        imagem: 'assets/img/lasanha-bolonhesa.jpg',
         descricao: 'Camadas de massa, molho rico e um cremoso molho bechamel.',
         chefId: 'marcos-l', 
         dificuldade: 'Médio',
@@ -98,7 +98,7 @@ const recipes = [
     {
         id: 'frango-assado-ervas',
         titulo: 'Frango Assado com Ervas',
-        imagem: 'https://plus.unsplash.com/premium_photo-1726812054316-10bc1d562596?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1121',
+        imagem: 'assets/img/frango-assado-ervas.jpg',
         descricao: 'Um prato suculento e aromático que conforta e agrada a todos.',
         chefId: 'marcos-l', 
         dificuldade: 'Fácil',
@@ -112,7 +112,7 @@ const recipes = [
     {
         id: 'risoto-cogumelos',
         titulo: 'Risoto Cremoso de Cogumelos',
-        imagem: 'https://plus.unsplash.com/premium_photo-1694850980331-fd0dd7f6617b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687',
+        imagem: 'assets/img/risoto-cogumelos.jpg',
         descricao: 'Um prato italiano clássico, elegante e cheio de sabor umami.',
         chefId: 'ana-souza', 
         dificuldade: 'Médio',
@@ -126,7 +126,7 @@ const recipes = [
     {
         id: 'sopa-lentilha',
         titulo: 'Sopa de Lentilha Nutritiva',
-        imagem: 'https://images.unsplash.com/photo-1552298013-de2af4b94854?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        imagem: 'assets/img/sopa-lentilha.jpg',
         descricao: 'Uma sopa vegana rica em proteínas e sabor, perfeita para aquecer.',
         chefId: 'ana-souza', 
         dificuldade: 'Fácil',
@@ -140,7 +140,7 @@ const recipes = [
     {
         id: 'brownie-chocolate',
         titulo: 'Brownie de Chocolate Intenso',
-        imagem: 'https://img.freepik.com/fotos-gratis/brownies-de-chocolate-na-mesa_1339-5780.jpg?t=st=1761608678~exp=1761612278~hmac=c16ea0f355579e0d337790d4835cc0677a4677012bbab6e5da581fc2090fb3ab&w=1480',
+        imagem: 'assets/img/brownie-chocolate.jpg',
         descricao: 'Com uma casquinha crocante e um interior úmido e chocolatudo.',
         chefId: 'julia-costa', 
         dificuldade: 'Fácil',
