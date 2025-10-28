@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Receitas Incríveis</title>
+    <title>Receitas Incríveis - Início</title>
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js"></script>
-    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/script.js" defer></script> 
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/index-loader.js" defer></script>
 </head>
 <body>
+
     <header class="custom-header">
         <div class="logo-area">
             <div class="avatar">
@@ -33,35 +36,10 @@
     </header>
 
     <main>
-        <h1>Entre em Contato</h1>
-        <p>Tem alguma dúvida, sugestão ou parceria? Fale conosco!</p>
-        <div class="form-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <wa-input label="Nome" name="name" placeholder="Digite seu nome"></wa-input>
-                </div>
-                <div class="form-group">
-                    <wa-input type="email" label="Email" name="email" placeholder="Digite seu email"></wa-input>
-                </div>
-                <div class="form-group">
-                    <wa-select label="Assunto" name="assunto">
-                        <wa-option value="duvida">Dúvida sobre Receita</wa-option>
-                        <wa-option value="sugestao">Sugestão de Receita</wa-option>
-                        <wa-option value="parceria">Parceria</wa-option>
-                        <wa-option value="outro">Outro</wa-option>
-                    </wa-select>
-                </div>
-                <div class="form-group">
-                    <wa-textarea label="Mensagem" name="message" rows="5" placeholder="Digite sua mensagem"></wa-textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar Mensagem</button>
-            </form>
-
-            <div class="contact-illustration">
-                <img src="assets/img/Contact us.gif" alt="Ilustração de Contato" >
-            </div>
-        </div>
+        <h1>Últimas Receitas</h1>
+        <div class="recipe-grid" id="recipe-grid"></div>
     </main>
+    
     <footer class="custom-footer">
         <div class="footer-brand">
             <img src="assets/img/logo.svg" alt="Logo Receitas Incríveis" class="footer-logo">

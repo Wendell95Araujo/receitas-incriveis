@@ -81,8 +81,8 @@ h2 {
 }
 
 main {
-  padding: var(--spacing-lg);
-  width: 100%;
+  padding: var(--spacing-lg) 0;
+  width: 90%;
   max-width: var(--layout-max-width);
   margin: 0 auto;
   margin-top: var(--header-height);
@@ -241,16 +241,6 @@ main {
   font-weight: var(--font-weight-bold);
 }
 
-.form-group input,
-.form-group textarea {
-  padding: 10px 12px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
-  font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .submit-button {
   background-color: var(--color-primary);
   color: var(--color-surface);
@@ -354,6 +344,36 @@ wa-button.back-button::part(base):hover {
 
 .custom-footer a:hover {
   text-decoration: underline;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin: 0;
+  border: none;
+}
+
+.error-message {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+  border: none;
+}
+
+.error-description {
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  margin-bottom: var(--spacing-lg);
 }
 
 /* ==========================================================================
