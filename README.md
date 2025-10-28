@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/logo.svg" alt="Logo Receitas Incríveis" width="150"/>
+  <img src="assets/img/logo.png" alt="Logo Receitas Incríveis" width="150"/>
 </p>
 
 <h1 align="center">
