@@ -119,7 +119,7 @@ O projeto está organizado da seguinte forma para facilitar a manutenção:
 
 ## ✒️ Autor
 
-Este projeto foi desenvolvido com ❤️ por **Wendell Araujo Dev**.
+Este projeto foi desenvolvido por **Wendell Araujo Dev**.
 
 *   **Portfólio:** **[wendell-araujo.web.app](https://wendell-araujo.web.app/)**
 *   **GitHub:** **[@Wendell95Araujoo](https://github.com/Wendell95Araujo)**
