@@ -38,15 +38,13 @@
         <div class="form-container">
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                    <wa-input label="Nome" name="name" placeholder="Digite seu nome"></wa-input>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    <wa-input type="email" label="Email" name="email" placeholder="Digite seu email"></wa-input>
                 </div>
                 <div class="form-group">
-                    <wa-select label="Assunto">
+                    <wa-select label="Assunto" name="assunto">
                         <wa-option value="duvida">Dúvida sobre Receita</wa-option>
                         <wa-option value="sugestao">Sugestão de Receita</wa-option>
                         <wa-option value="parceria">Parceria</wa-option>
@@ -54,11 +52,11 @@
                     </wa-select>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem"></textarea>
+                    <wa-textarea label="Mensagem" name="message" rows="5" placeholder="Digite sua mensagem"></wa-textarea>
                 </div>
                 <button type="submit" class="submit-button">Enviar Mensagem</button>
             </form>
+
             <div class="contact-illustration">
                 <img src="assets/img/Contact us.gif" alt="Ilustração de Contato" >
             </div>
