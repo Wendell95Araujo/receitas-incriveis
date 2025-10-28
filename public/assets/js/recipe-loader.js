@@ -137,7 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbnailScroller = document.getElementById("thumbnail-scroller");
 
   function openGallery() {
-    carousel.innerHTML = ''; 
+    carousel.innerHTML = '';
+    thumbnailScroller.innerHTML = '';
 
     recipe.imagens.forEach((imgPath, index) => {
       const carouselItem = document.createElement('wa-carousel-item');
