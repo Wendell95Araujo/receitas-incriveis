@@ -17,7 +17,7 @@
 
 ## 🚀 Demonstração ao Vivo
 
-**[Acesse a demonstração ao vivo AQUI!](https://wendell-araujo.github.io/receitas-incriveis/)**
+**[Acesse a demonstração ao vivo AQUI!](https://receitas-incriveis-wma.web.app)**
 
 ## ✨ Visão Geral do Projeto
 
