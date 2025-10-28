@@ -146,6 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
       imgElement.alt = `${recipe.titulo} - Imagem ${index + 1}`;
       carouselItem.appendChild(imgElement);
       carousel.appendChild(carouselItem);
+
+      const thumbElement = document.createElement('img');
+      thumbElement.src = imgPath;
+      thumbElement.alt = `Miniatura ${index + 1}`;
+      thumbElement.classList.add('thumbnail-image');
+
+      if (index === 0) {
+        thumbElement.classList.add('active');
+      }
+      thumbnailScroller.appendChild(thumbElement);
     });
 
     dialog.show();
