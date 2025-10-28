@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Incríveis</title>
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <meta name="description" content="Descubra receitas deliciosas e fáceis de fazer em nosso site.">
+    <meta name="author" content="Wendell Araujo Dev">
+    <meta name="keywords" content="receitas, culinária, comida, chefs, dicas, fácil, rápido, cozinhar, pratos, sobremesas, gastronomia">
+    <meta property="og:title" content="Receitas Incríveis">
+    <meta property="og:description" content="Descubra receitas deliciosas e fáceis de fazer em nosso site.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://receitas-incriveis-wma.web.app/receita.html">
+    <meta property="og:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta property="og:image:alt" content="Logo do site Receitas Incríveis">
+    <meta property="og:site_name" content="Receitas Incríveis">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Receitas Incríveis">
+    <meta name="twitter:description" content="Descubra receitas deliciosas e fáceis de fazer em nosso site.">
+    <meta name="twitter:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta name="twitter:image:alt" content="Logo do site Receitas Incríveis">
+    <meta name="twitter:url" content="https://receitas-incriveis-wma.web.app/receita.html">
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
     <link rel="stylesheet" href="assets/css/style.css">
@@ -34,31 +51,36 @@
         </div>
     </header>
     <main>
-        <wa-button href="index.html" variant="neutral" class="back-button">
-            <wa-icon name="arrow-left" slot="start"></wa-icon>
-            Voltar para Início
-        </wa-button>
-        <div class="recipe-detail-header">
-            <img id="recipe-image" src="" alt="">
-            <div>
-                <h1 id="recipe-title"></h1>
-                <div class="recipe-info" id="recipe-info">
+        <div class="loader-container" id="loader">
+            <wa-spinner></wa-spinner>
+            <p>Carregando receita...</p>
+        </div>
+        <div id="recipe-content-wrapper" class="hidden">
+            <wa-button href="index.html" variant="neutral" class="back-button">
+                <wa-icon name="arrow-left" slot="start"></wa-icon>
+                Voltar para Início
+            </wa-button>
+            <div class="recipe-detail-header">
+                <img id="recipe-image" src="" alt="">
+                <div>
+                    <h1 id="recipe-title"></h1>
+                    <div class="recipe-info" id="recipe-info"></div>
                 </div>
             </div>
+
+            <wa-tab-group>
+                <wa-tab slot="nav" panel="ingredientes">Ingredientes</wa-tab>
+                <wa-tab slot="nav" panel="preparo">Modo de Preparo</wa-tab>
+
+                <wa-tab-panel name="ingredientes">
+                    <ul id="recipe-ingredients" style="line-height: 1.8;"></ul>
+                </wa-tab-panel>
+
+                <wa-tab-panel name="preparo">
+                    <ol id="recipe-steps" style="line-height: 1.8;"></ol>
+                </wa-tab-panel>
+            </wa-tab-group>
         </div>
-
-        <wa-tab-group>
-            <wa-tab slot="nav" panel="ingredientes">Ingredientes</wa-tab>
-            <wa-tab slot="nav" panel="preparo">Modo de Preparo</wa-tab>
-
-            <wa-tab-panel name="ingredientes">
-                <ul id="recipe-ingredients" style="line-height: 1.8;"></ul>
-            </wa-tab-panel>
-
-            <wa-tab-panel name="preparo">
-                <ol id="recipe-steps" style="line-height: 1.8;"></ol>
-            </wa-tab-panel>
-        </wa-tab-group>
     </main>
 
     <wa-dialog id="image-dialog" label="Visualização da Receita">

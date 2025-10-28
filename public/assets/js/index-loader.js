@@ -1,12 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const recipeGrid = document.getElementById('recipe-grid');
-    if (!recipeGrid) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const recipeGrid = document.getElementById("recipe-grid");
+  const loader = document.getElementById("loader");
+  if (!recipeGrid) return;
 
-    recipes.forEach(recipe => {
-        const chef = chefs.find(c => c.id === recipe.chefId);
-        if (!chef) return;
+  recipes.forEach((recipe) => {
+    const chef = chefs.find((c) => c.id === recipe.chefId);
+    if (!chef) return;
 
-        const cardHtml = `
+    const cardHtml = `
             <wa-card class="recipe-card" onclick="window.location.href='receita.html?id=${recipe.id}';">
                 <img src="${recipe.imagem}" alt="${recipe.titulo}">
                 <div class="recipe-card-content">
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </wa-card>
         `;
-        recipeGrid.innerHTML += cardHtml;
-    });
+    recipeGrid.innerHTML += cardHtml;
+  });
+  loader.classList.add("hidden");
+  recipeGrid.classList.remove("hidden");
 });

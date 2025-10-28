@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Incríveis - Início</title>
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre receitas incríveis e fáceis de fazer! Dicas de chefs, pratos para todas as ocasiões, sobremesas e muito mais em nosso site de culinária.">
+    <meta name="author" content="Wendell Araujo Dev">
+    <meta name="keywords" content="receitas, culinária, comida, chefs, dicas, fácil, rápido, cozinhar, pratos, sobremesas, gastronomia">
+    <meta property="og:title" content="Receitas Incríveis - Encontre pratos deliciosos">
+    <meta property="og:description" content="Explore um mundo de sabores com nossas receitas fáceis e dicas de chefs profissionais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://receitas-incriveis-wma.web.app/">
+    <meta property="og:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta property="og:image:alt" content="Logo do site Receitas Incríveis">
+    <meta property="og:site_name" content="Receitas Incríveis">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Receitas Incríveis - Encontre pratos deliciosos">
+    <meta name="twitter:description" content="Explore um mundo de sabores com nossas receitas fáceis e dicas de chefs profissionais.">
+    <meta name="twitter:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta name="twitter:image:alt" content="Logo do site Receitas Incríveis">
+    <meta name="twitter:url" content="https://receitas-incriveis-wma.web.app/">
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
     <link rel="stylesheet" href="assets/css/style.css">
@@ -37,7 +53,11 @@
 
     <main>
         <h1>Últimas Receitas</h1>
-        <div class="recipe-grid" id="recipe-grid"></div>
+        <div class="loader-container" id="loader">
+            <wa-spinner></wa-spinner>
+            <p>Carregando receitas...</p>
+        </div>
+        <div class="recipe-grid hidden" id="recipe-grid"></div>
     </main>
     
     <footer class="custom-footer">

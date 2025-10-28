@@ -92,6 +92,25 @@ main {
 /* ==========================================================================
    COMPONENTES (LOGO, NAV, CARD, FORM, BOTÕES)
    ========================================================================== */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  min-height: 60vh;
+  color: var(--color-text-secondary);
+}
+
+.loader-container wa-spinner {
+  font-size: 3rem;
+  --indicator-color: var(--color-primary);
+  --track-color: var(--color-primary-light);
+}
+
+.hidden {
+  display: none !important;
+}
 
 .logo-area {
   display: flex;

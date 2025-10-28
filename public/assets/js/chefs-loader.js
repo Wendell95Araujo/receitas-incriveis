@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const chefsGrid = document.getElementById("chefs-grid");
+  const loader = document.getElementById("loader");
   if (!chefsGrid) return;
 
   chefs.forEach((chef) => {
@@ -14,4 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     chefsGrid.innerHTML += cardHtml;
   });
+  loader.classList.add("hidden");
+  chefsGrid.classList.remove("hidden");
 });

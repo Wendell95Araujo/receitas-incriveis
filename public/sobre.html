@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Chefs - Receitas Incríveis</title>
+    <title>Conheça Nossos Chefs | Receitas Incríveis</title>
     <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+    <meta name="description" content="Descubra a equipe de chefs por trás das nossas receitas. Conheça as especialidades de Ana, Marcos e Julia.">
+    <meta name="author" content="Wendell Araujo Dev">
+    <meta name="keywords" content="receitas, culinária, comida, chefs, dicas, fácil, rápido, cozinhar, pratos, sobremesas, gastronomia">
+    <meta property="og:title" content="Conheça Nossos Chefs | Receitas Incríveis">
+    <meta property="og:description" content="Explore um mundo de sabores com nossas receitas fáceis e dicas de chefs profissionais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://receitas-incriveis-wma.web.app/">
+    <meta property="og:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta property="og:image:alt" content="Logo do site Receitas Incríveis">
+    <meta property="og:site_name" content="Receitas Incríveis">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Conheça Nossos Chefs | Receitas Incríveis">
+    <meta name="twitter:description" content="Explore um mundo de sabores com nossas receitas fáceis e dicas de chefs profissionais.">
+    <meta name="twitter:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
+    <meta name="twitter:image:alt" content="Logo do site Receitas Incríveis">
+    <meta name="twitter:url" content="https://receitas-incriveis-wma.web.app/">
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
     <link rel="stylesheet" href="assets/css/style.css">
@@ -36,10 +53,13 @@
     <main>
         <h1>Conheça Nossos Chefs</h1>
         <p>A equipe por trás das receitas que você ama.</p>
-        
-        <div class="chefs-grid" id="chefs-grid"></div>
+        <div class="loader-container" id="loader">
+            <wa-spinner></wa-spinner>
+            <p>Carregando chefs...</p>
+        </div>        
+        <div class="chefs-grid hidden" id="chefs-grid"></div>
     </main>
-    
+
     <footer class="custom-footer">
         <div class="footer-brand">
             <img src="assets/img/logo.svg" alt="Logo Receitas Incríveis" class="footer-logo">

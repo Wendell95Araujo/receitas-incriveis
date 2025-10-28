@@ -1,23 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const contentWrapper = document.getElementById("recipe-content-wrapper");
+  function setMetaTag(property, content) {
+    let element =
+      document.querySelector(`meta[name="${property}"]`) ||
+      document.querySelector(`meta[property="${property}"]`);
+    if (!element) {
+      element = document.createElement("meta");
+      if (property.startsWith("og:") || property.startsWith("twitter:")) {
+        element.setAttribute("property", property);
+      } else {
+        element.setAttribute("name", property);
+      }
+      document.head.appendChild(element);
+    }
+    element.setAttribute("content", content);
+  }
+
   const params = new URLSearchParams(window.location.search);
   const recipeId = params.get("id");
 
+  const mainContent = document.querySelector("main");
+
   if (!recipeId) {
-    document.getElementById("recipe-content").innerHTML =
-      "<h1>Receita não encontrada!</h1>";
+    mainContent.innerHTML = "<h1>Receita não encontrada!</h1>";
     return;
   }
 
   const recipe = recipes.find((r) => r.id === recipeId);
 
   if (!recipe) {
-    document.getElementById(
-      "recipe-content"
-    ).innerHTML = `<h1>Receita com ID "${recipeId}" não encontrada!</h1>`;
+    mainContent.innerHTML = `<h1>Receita com ID "${recipeId}" não encontrada!</h1>`;
     return;
   }
 
-  document.title = recipe.titulo;
+  const pageTitle = `${recipe.titulo} | Receitas Incríveis`;
+  const pageDescription = `Aprenda a fazer ${
+    recipe.titulo
+  }. Uma receita ${recipe.dificuldade.toLowerCase()} que fica pronta em ${
+    recipe.tempo
+  }. Veja os ingredientes e o modo de preparo.`;
+  const pageImage = recipe.imagem;
+  const pageUrl = window.location.href;
+
+  document.title = pageTitle;
+
+  setMetaTag("description", pageDescription);
+  setMetaTag("og:title", pageTitle);
+  setMetaTag("og:description", pageDescription);
+  setMetaTag("og:image", pageImage);
+  setMetaTag("og:url", pageUrl);
+  setMetaTag("twitter:title", pageTitle);
+  setMetaTag("twitter:description", pageDescription);
+  setMetaTag("twitter:image", pageImage);
+  setMetaTag("twitter:url", pageUrl);
+
   document.getElementById("recipe-title").textContent = recipe.titulo;
   const recipeImage = document.getElementById("recipe-image");
   recipeImage.src = recipe.imagem;
@@ -53,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ratingContainer.appendChild(ratingElement);
   ratingContainer.appendChild(tooltipElement);
-
   infoContainer.appendChild(ratingContainer);
 
   const reviewsSpan = document.createElement("span");
@@ -85,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     `;
-
     tabGroup.insertAdjacentHTML("afterend", alertHtml);
   }
 
@@ -94,10 +129,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const dialogImage = document.getElementById("dialog-image");
 
   mainImage.style.cursor = "zoom-in";
-
   mainImage.addEventListener("click", () => {
     dialogImage.src = mainImage.src;
-
     dialog.show();
   });
+  loader.classList.add("hidden");
+  contentWrapper.classList.remove("hidden");
 });
