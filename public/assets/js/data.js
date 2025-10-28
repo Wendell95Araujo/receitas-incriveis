@@ -28,7 +28,11 @@ const recipes = [
     {
         id: 'salada-verao',
         titulo: 'Salada Fresca de Verão',
-        imagem: 'assets/img/salada-verao.jpg',
+        imagens: [
+            'assets/img/salada-verao/1.jpg', 
+            'assets/img/salada-verao/2.jpg',
+            'assets/img/salada-verao/3.jpg'
+        ],
         descricao: 'Uma salada leve e refrescante, perfeita para os dias quentes.',
         chefId: 'ana-souza', 
         dificuldade: 'Fácil',
@@ -42,7 +46,10 @@ const recipes = [
     {
         id: 'panquecas-americanas',
         titulo: 'Panquecas Americanas',
-        imagem: 'assets/img/panquecas-americanas.jpg',
+        imagens: [
+            'assets/img/panquecas-americanas/1.jpg',
+            'assets/img/panquecas-americanas/2.jpg'
+        ],
         descricao: 'A receita perfeita para um café da manhã de fim de semana inesquecível.',
         chefId: 'julia-costa', 
         dificuldade: 'Fácil',
@@ -56,7 +63,11 @@ const recipes = [
     {
         id: 'pizza-margherita',
         titulo: 'Pizza Margherita Caseira',
-        imagem: 'assets/img/pizza-margherita.jpg',
+        imagens: [
+            'assets/img/pizza-margherita/1.jpg',
+            'assets/img/pizza-margherita/2.jpg',
+            'assets/img/pizza-margherita/3.jpg'
+        ],
         descricao: 'Aprenda a fazer a clássica pizza italiana com ingredientes simples.',
         chefId: 'marcos-l', 
         dificuldade: 'Médio',
@@ -70,7 +81,11 @@ const recipes = [
     {
         id: 'mousse-maracuja',
         titulo: 'Mousse de Maracujá Rápido',
-        imagem: 'assets/img/mousse-maracuja.jpg',
+        imagens: [
+            'assets/img/mousse-maracuja/1.jpg',
+            'assets/img/mousse-maracuja/2.jpg',
+            'assets/img/mousse-maracuja/3.jpg'
+        ],
         descricao: 'Uma sobremesa aerada, cremosa e com o equilíbrio perfeito entre doce e azedo.',
         chefId: 'julia-costa', 
         dificuldade: 'Muito Fácil',
@@ -84,7 +99,11 @@ const recipes = [
     {
         id: 'lasanha-bolonhesa',
         titulo: 'Lasanha à Bolonhesa',
-        imagem: 'assets/img/lasanha-bolonhesa.jpg',
+        imagens: [
+            'assets/img/lasanha-bolonhesa/1.jpg',
+            'assets/img/lasanha-bolonhesa/2.jpg',
+            'assets/img/lasanha-bolonhesa/3.jpg'
+        ],
         descricao: 'Camadas de massa, molho rico e um cremoso molho bechamel.',
         chefId: 'marcos-l', 
         dificuldade: 'Médio',
@@ -98,7 +117,10 @@ const recipes = [
     {
         id: 'frango-assado-ervas',
         titulo: 'Frango Assado com Ervas',
-        imagem: 'assets/img/frango-assado-ervas.jpg',
+        imagens: [
+            'assets/img/frango-assado-ervas/1.jpg', 
+            'assets/img/frango-assado-ervas/2.jpg'
+        ],
         descricao: 'Um prato suculento e aromático que conforta e agrada a todos.',
         chefId: 'marcos-l', 
         dificuldade: 'Fácil',
@@ -112,7 +134,7 @@ const recipes = [
     {
         id: 'risoto-cogumelos',
         titulo: 'Risoto Cremoso de Cogumelos',
-        imagem: 'assets/img/risoto-cogumelos.jpg',
+        imagens: ['assets/img/risoto-cogumelos/1.jpg'],
         descricao: 'Um prato italiano clássico, elegante e cheio de sabor umami.',
         chefId: 'ana-souza', 
         dificuldade: 'Médio',
@@ -126,7 +148,7 @@ const recipes = [
     {
         id: 'sopa-lentilha',
         titulo: 'Sopa de Lentilha Nutritiva',
-        imagem: 'assets/img/sopa-lentilha.jpg',
+        imagens: ['assets/img/sopa-lentilha/1.jpg'],
         descricao: 'Uma sopa vegana rica em proteínas e sabor, perfeita para aquecer.',
         chefId: 'ana-souza', 
         dificuldade: 'Fácil',
@@ -140,7 +162,10 @@ const recipes = [
     {
         id: 'brownie-chocolate',
         titulo: 'Brownie de Chocolate Intenso',
-        imagem: 'assets/img/brownie-chocolate.jpg',
+        imagens: [
+            'assets/img/brownie-chocolate/1.jpg',
+            'assets/img/brownie-chocolate/2.jpg'
+        ],
         descricao: 'Com uma casquinha crocante e um interior úmido e chocolatudo.',
         chefId: 'julia-costa', 
         dificuldade: 'Fácil',

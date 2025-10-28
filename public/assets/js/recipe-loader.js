@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const contentWrapper = document.getElementById("recipe-content-wrapper");
+
   function setMetaTag(property, content) {
     let element =
       document.querySelector(`meta[name="${property}"]`) ||
@@ -19,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const params = new URLSearchParams(window.location.search);
   const recipeId = params.get("id");
-
   const mainContent = document.querySelector("main");
 
   if (!recipeId) {
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const pageImage = new URL(recipe.imagens[0], window.location.href).href;
   const pageTitle = `${recipe.titulo} | Receitas Incríveis`;
   const pageDescription = `Aprenda a fazer ${
     recipe.titulo
   }. Uma receita ${recipe.dificuldade.toLowerCase()} que fica pronta em ${
     recipe.tempo
   }. Veja os ingredientes e o modo de preparo.`;
-  const pageImage = recipe.imagem;
   const pageUrl = window.location.href;
 
   document.title = pageTitle;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("recipe-title").textContent = recipe.titulo;
   const recipeImage = document.getElementById("recipe-image");
-  recipeImage.src = recipe.imagem;
+  recipeImage.src = recipe.imagens[0];
   recipeImage.alt = recipe.titulo;
 
   const infoContainer = document.getElementById("recipe-info");
@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   infoContainer.appendChild(reviewsSpan);
 
   const ingredientsList = document.getElementById("recipe-ingredients");
+  ingredientsList.innerHTML = "";
   recipe.ingredientes.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -104,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const stepsList = document.getElementById("recipe-steps");
+  stepsList.innerHTML = "";
   recipe.preparo.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item;
@@ -121,18 +123,61 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     `;
+
+    const oldAlert = document.querySelector(".custom-alert");
+    if (oldAlert) oldAlert.remove();
+
     tabGroup.insertAdjacentHTML("afterend", alertHtml);
   }
 
-  const mainImage = document.getElementById("recipe-image");
+  const mainImageContainer = document.getElementById("main-image-container");
+  const openGalleryBtn = document.getElementById("open-gallery-btn");
   const dialog = document.getElementById("image-dialog");
-  const dialogImage = document.getElementById("dialog-image");
+  const carousel = document.getElementById("image-carousel");
+  const thumbnailScroller = document.getElementById("thumbnail-scroller");
 
-  mainImage.style.cursor = "zoom-in";
-  mainImage.addEventListener("click", () => {
-    dialogImage.src = mainImage.src;
+  function openGallery() {
+    carousel.innerHTML = ''; 
+
+    recipe.imagens.forEach((imgPath, index) => {
+      const carouselItem = document.createElement('wa-carousel-item');
+      const imgElement = document.createElement('img');
+      imgElement.src = imgPath;
+      imgElement.alt = `${recipe.titulo} - Imagem ${index + 1}`;
+      carouselItem.appendChild(imgElement);
+      carousel.appendChild(carouselItem);
+    });
+
     dialog.show();
+  }
+
+  mainImageContainer.addEventListener("click", openGallery);
+  openGalleryBtn.addEventListener("click", openGallery);
+
+  thumbnailScroller.addEventListener("click", (e) => {
+    if (e.target.matches(".thumbnail-image")) {
+      const thumbnails = thumbnailScroller.querySelectorAll(".thumbnail-image");
+      const index = Array.from(thumbnails).indexOf(e.target);
+      carousel.goToSlide(index);
+    }
   });
+
+  carousel.addEventListener("wa-slide-change", (e) => {
+    const slideIndex = e.detail.index;
+    const thumbnails = thumbnailScroller.querySelectorAll(".thumbnail-image");
+
+    thumbnails.forEach((thumb, i) => {
+      thumb.classList.toggle("active", i === slideIndex);
+      if (i === slideIndex) {
+        thumb.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    });
+  });
+
   loader.classList.add("hidden");
   contentWrapper.classList.remove("hidden");
 });

@@ -61,7 +61,19 @@
                 Voltar para Início
             </wa-button>
             <div class="recipe-detail-header">
-                <img id="recipe-image" src="" alt="">
+                <div id="main-image-container">
+                    <img id="recipe-image" src="" alt="">
+                    <div class="image-overlay-icon">
+                        <wa-icon name="magnifying-glass-plus"></wa-icon>
+                        <span>Ver Galeria</span>
+                    </div>
+                </div>
+
+                <wa-button id="open-gallery-btn" variant="neutral" class="gallery-button">
+                    <wa-icon name="images" slot="start"></wa-icon>
+                    Ver Galeria de Fotos
+                </wa-button>
+
                 <div>
                     <h1 id="recipe-title"></h1>
                     <div class="recipe-info" id="recipe-info"></div>
@@ -83,8 +95,12 @@
         </div>
     </main>
 
-    <wa-dialog id="image-dialog" label="Visualização da Receita">
-        <img id="dialog-image" src="" alt="Imagem da receita em tamanho maior">
+    <wa-dialog id="image-dialog" label="Galeria da Receita">
+        <wa-carousel id="image-carousel" mouse-dragging navigation loop></wa-carousel>
+        <div class="thumbnails">
+            <div class="scroller" id="thumbnail-scroller">
+            </div>
+        </div>
     </wa-dialog>
     
     <footer class="custom-footer">
