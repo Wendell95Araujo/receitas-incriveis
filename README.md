@@ -33,10 +33,10 @@ Este projeto foi desenvolvido como um exercício prático para explorar a biblio
   </tr>
   <tr>
     <td>
-      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-home.png" alt="Screenshot da Página Inicial" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-home.png" alt="Screenshot da Página Inicial" width="400">
     </td>
     <td>
-      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita" width="400">
     </td>
   </tr>
   <tr>
@@ -45,11 +45,9 @@ Este projeto foi desenvolvido como um exercício prático para explorar a biblio
   </tr>
   <tr>
     <td>
-      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs" width="400">
       </td>
-    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-mobile.png" 
-        alt="Screenshot do site em um dispositivo móvel" 
-        style="width:400px; max-height:600px; object-fit: contain; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+    <td align="center"><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-mobile.png" alt="Screenshot do site em um dispositivo móvel" width="250">
     </td>
   </tr>
 </table>
