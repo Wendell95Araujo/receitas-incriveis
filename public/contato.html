@@ -23,10 +23,10 @@
     <meta name="twitter:image" content="https://receitas-incriveis-wma.web.app/assets/img/logo.svg">
     <meta name="twitter:image:alt" content="Logo do site Receitas Incríveis">
     <meta name="twitter:url" content="https://receitas-incriveis-wma.web.app/">
+    <link rel="preload" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js" as="script">
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/themes/default.css" />
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/styles/utilities.css" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.6/dist/webawesome.loader.js"></script>
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
@@ -50,35 +50,57 @@
     </header>
 
     <main>
-        <h1>Entre em Contato</h1>
-        <p>Tem alguma dúvida, sugestão ou parceria? Fale conosco!</p>
-        <div class="form-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <wa-input label="Nome" placeholder="Digite seu nome" name="name"></wa-input>
-                </div>
-                <div class="form-group">
-                    <wa-input type="email" label="Email" placeholder="Digite seu email" name="email"></wa-input>
-                </div>
-                <div class="form-group">
-                    <wa-select label="Assunto" name="subject">
-                        <wa-option value="duvida">Dúvida sobre Receita</wa-option>
-                        <wa-option value="sugestao">Sugestão de Receita</wa-option>
-                        <wa-option value="parceria">Parceria</wa-option>
-                        <wa-option value="outro">Outro</wa-option>
-                    </wa-select>
-                </div>
-                <div class="form-group">
-                    <wa-textarea label="Mensagem" placeholder="Digite sua mensagem" name="message" rows="5"></wa-textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar Mensagem</button>
-            </form>
-
-            <div class="contact-illustration">
-                <img src="assets/img/Contact us.gif" alt="Ilustração de Contato" >
-            </div>
+        <div class="loader-container" id="loader">
+            <wa-spinner></wa-spinner>
+            <p>Carregando página...</p>
         </div>
+        
+        <section id="contact-content" class="hidden">
+            <h1>Entre em Contato</h1>
+            <p>Tem alguma dúvida, sugestão ou parceria? Fale conosco!</p>
+        
+            <div id="form-alert" class="custom-alert custom-alert-danger hidden">
+                <wa-icon name="triangle-exclamation"></wa-icon>
+                <span>Por favor, preencha todos os campos obrigatórios antes de enviar.</span>
+            </div>
+        
+            <div class="form-container">
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <wa-input label="Nome" placeholder="Digite seu nome" name="name" required></wa-input>
+                    </div>
+
+                    <div class="form-group">
+                        <wa-input type="email" label="Email" placeholder="Digite seu email" name="email" required></wa-input>
+                    </div>
+
+                    <div class="form-group">
+                        <wa-select label="Assunto" name="subject" required>
+                            <wa-option value="">Selecione um assunto</wa-option>
+                            <wa-option value="duvida">Dúvida sobre Receita</wa-option>
+                            <wa-option value="sugestao">Sugestão de Receita</wa-option>
+                            <wa-option value="parceria">Parceria</wa-option>
+                            <wa-option value="outro">Outro</wa-option>
+                        </wa-select>
+                    </div>
+
+                    <div class="form-group">
+                        <wa-textarea label="Mensagem" placeholder="Digite sua mensagem" name="message" rows="5" required></wa-textarea>
+                    </div>
+            
+                    <wa-button type="submit" variant="primary" class="submit-button">
+                        <wa-icon name="paper-plane" slot="start"></wa-icon>
+                        Enviar Mensagem
+                    </wa-button>
+                </form>
+            
+                <div class="contact-illustration">
+                    <img src="assets/img/Contact us.gif" alt="Ilustração de Contato">
+                </div>
+            </div>
+        </section>
     </main>
+      
 
     <footer class="custom-footer">
         <div class="footer-brand">
@@ -92,5 +114,7 @@
             </a>
         </p>
     </footer>
+    <script type="text/javascript" src="assets/js/contact.js"></script>
+    <script src="assets/js/contact-loader.js" defer></script>
 </body>
 </html>

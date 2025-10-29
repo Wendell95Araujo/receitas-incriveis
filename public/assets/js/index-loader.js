@@ -22,6 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     recipeGrid.innerHTML += cardHtml;
   });
-  loader.classList.add("hidden");
-  recipeGrid.classList.remove("hidden");
+
+  const images = recipeGrid.querySelectorAll("img");
+  const imagePromises = Array.from(images).map(
+    (img) =>
+      new Promise((resolve) => {
+        if (img.complete) resolve();
+        else {
+          img.onload = img.onerror = resolve;
+        }
+      })
+  );
+
+  Promise.all(imagePromises).then(() => {
+    loader.classList.add("hidden");
+    recipeGrid.classList.remove("hidden");
+  });
 });

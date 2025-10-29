@@ -137,24 +137,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbnailScroller = document.getElementById("thumbnail-scroller");
 
   function openGallery() {
-    carousel.innerHTML = '';
-    thumbnailScroller.innerHTML = '';
+    carousel.innerHTML = "";
+    thumbnailScroller.innerHTML = "";
 
     recipe.imagens.forEach((imgPath, index) => {
-      const carouselItem = document.createElement('wa-carousel-item');
-      const imgElement = document.createElement('img');
+      const carouselItem = document.createElement("wa-carousel-item");
+      const imgElement = document.createElement("img");
       imgElement.src = imgPath;
       imgElement.alt = `${recipe.titulo} - Imagem ${index + 1}`;
       carouselItem.appendChild(imgElement);
       carousel.appendChild(carouselItem);
 
-      const thumbElement = document.createElement('img');
+      const thumbElement = document.createElement("img");
       thumbElement.src = imgPath;
       thumbElement.alt = `Miniatura ${index + 1}`;
-      thumbElement.classList.add('thumbnail-image');
+      thumbElement.classList.add("thumbnail-image");
 
       if (index === 0) {
-        thumbElement.classList.add('active');
+        thumbElement.classList.add("active");
       }
       thumbnailScroller.appendChild(thumbElement);
     });
@@ -189,6 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  loader.classList.add("hidden");
-  contentWrapper.classList.remove("hidden");
+  recipeImage.onload = () => {
+    loader.classList.add("hidden");
+    contentWrapper.classList.remove("hidden");
+  };
+
+  if (recipeImage.complete) {
+    loader.classList.add("hidden");
+    contentWrapper.classList.remove("hidden");
+  }
 });

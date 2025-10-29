@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://receitas-incriveis-wma.web.app/assets/img/logo.png" alt="Logo Receitas Incríveis" width="150"/>
+  <img src="https://receitas-incriveis-wma.web.app/assets/img/logo.svg" alt="Logo Receitas Incríveis" width="150"/>
 </p>
 
 <h1 align="center">
@@ -12,6 +12,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completo-brightgreen?style=for-the-badge" alt="Status do Projeto: Completo">
+  &nbsp;
   <img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-blue?style=for-the-badge" alt="Licença MIT">
 </p>
 
@@ -31,16 +32,25 @@ Este projeto foi desenvolvido como um exercício prático para explorar a biblio
     <td align="center"><strong>Página da Receita</strong></td>
   </tr>
   <tr>
-    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-home.png" alt="Screenshot da Página Inicial"></td>
-    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita"></td>
+    <td>
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-home.png" alt="Screenshot da Página Inicial" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+    </td>
+    <td>
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-receita.png" alt="Screenshot da Página da Receita" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+    </td>
   </tr>
   <tr>
     <td align="center"><strong>Página de Chefs</strong></td>
     <td align="center"><strong>Layout Responsivo (Mobile)</strong></td>
   </tr>
   <tr>
-    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs"></td>
-    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-mobile.png" alt="Screenshot do site em um dispositivo móvel"></td>
+    <td>
+      <img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-chefs.png" alt="Screenshot da Página de Chefs" width="400" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+      </td>
+    <td><img src="https://receitas-incriveis-wma.web.app/assets/img/screenshot-mobile.png" 
+        alt="Screenshot do site em um dispositivo móvel" 
+        style="width:400px; max-height:600px; object-fit: contain; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+    </td>
   </tr>
 </table>
 
@@ -61,15 +71,15 @@ Este projeto foi desenvolvido como um exercício prático para explorar a biblio
 
 Este projeto foi construído utilizando tecnologias web fundamentais, sem o uso de frameworks complexos.
 
-*   **HTML5**
-*   **CSS3**
-    *   Flexbox e CSS Grid para layout.
-    *   Variáveis CSS (Tokens) para um design system consistente.
-    *   Media Queries para responsividade.
-*   **JavaScript (ES6+)**
-    *   Manipulação do DOM para renderização dinâmica de conteúdo.
-*   **[Web Awesome](https://webawesome.com/)**
-    *   Biblioteca de Web Components para elementos de interface.
+* 🧱 **HTML5**
+* 🎨 **CSS3**
+      *   Flexbox e CSS Grid para layout.
+      *   Variáveis CSS (Tokens) para um design system consistente.
+      *   Media Queries para responsividade.
+* ⚡ **JavaScript (ES6+)**
+      *   Manipulação do DOM para renderização dinâmica de conteúdo.
+* 🧩 **[Web Awesome](https://webawesome.com/)**
+      *   Biblioteca de Web Components para elementos de interface.
 
 ## 🚀 Como Executar o Projeto Localmente
 
@@ -96,24 +106,27 @@ O projeto está organizado da seguinte forma para facilitar a manutenção:
 
 ```
 .
-├── index.html
-├── sobre.html
-├── receita.html
-├── contato.html
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   ├── data.js           # O "banco de dados" do site
-│   │   ├── script.js         # Scripts gerais (menu mobile)
-│   │   ├── index-loader.js   # Carrega as receitas na home
-│   │   ├── recipe-loader.js  # Carrega a receita específica
-│   │   └── chefs-loader.js   # Carrega os chefs na página sobre
-│   └── img/
-│       ├── logo.png
-│       ├── logo.svg
-│       ├── Contact us.gif
-│       └── screenshots
+├── public/
+│   ├── index.html
+│   ├── sobre.html
+│   ├── receita.html
+│   ├── contato.html
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   ├── js/
+│   │   │   ├── data.js           # "Banco de dados" local do site
+│   │   │   ├── script.js         # Scripts gerais (menu mobile, etc.)
+│   │   │   ├── index-loader.js   # Carrega as receitas na home
+│   │   │   ├── recipe-loader.js  # Carrega receita específica
+│   │   │   ├── chefs-loader.js   # Carrega os chefs na página "Sobre"
+│   │   │   ├── contact-loader.js # Gera o conteúdo da página de contato
+│   │   │   └── contact.js        # Valida e envia o formulário de contato
+│   │   └── img/
+│   │       ├── logo.png
+│   │       ├── logo.svg
+│   │       ├── Contact us.gif
+│   │       └── screenshots/
 └── README.md
 ```
 
