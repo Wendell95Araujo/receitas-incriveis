@@ -12,8 +12,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completo-brightgreen?style=for-the-badge" alt="Status do Projeto: Completo">
-  &nbsp;
-  <img src="https://img.shields.io/badge/Licen%C3%A7a-MIT-blue?style=for-the-badge" alt="Licença MIT">
 </p>
 
 ## 🚀 Demonstração ao Vivo
